@@ -42,7 +42,7 @@ phd-industry-resume/
 
 ### In the Claude app (claude.ai, desktop or mobile)
 
-1. Download the `phd-industry-resume.skill` file from this repository. There's also a release you can consider via `https://github.com/mediatecture/acmw-industry/releases`.
+1. Download the `phd-industry-resume.skill` file from this repository. There's also a [release](https://github.com/mediatecture/acmw-industry/releases) you can consider.
 2. Make sure code execution is on: **Settings > Capabilities**, then turn on **Code execution
    and file creation**. On a Team or Enterprise account, your organisation admin controls this.
 3. Go to **Customize > Skills**, click **+**, then **Create skill > Upload a skill**, and upload the `phd-industry-resume.skill`.
