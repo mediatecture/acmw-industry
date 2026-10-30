@@ -3,7 +3,7 @@
 A Claude skill that helps PhD graduates, postdocs and early-career researchers turn an academic CV
 into an industry resume.
 
-Custom-made by **Niels Wouters, PhD** ([nielswouters.au](https://nielswouters.au)) for attendees
+Custom-made by **Niels Wouters** ([nielswouters.au](https://nielswouters.au)) for attendees
 of the ACM-W workshop *From Research to Industry*, organised by the ACM-W Student Chapter at Monash
 University together with the Monash FIT EDI Portfolio.
 
@@ -44,12 +44,13 @@ phd-industry-resume/
 
 ### In the Claude app (claude.ai, desktop or mobile)
 
-1. Make sure code execution is on: **Settings > Capabilities**, then turn on **Code execution
+1. Download the `phd-industry-resume.skill` file from this repository. There's also a release you can consider via `https://github.com/mediatecture/acmw-industry/releases`.
+2. Make sure code execution is on: **Settings > Capabilities**, then turn on **Code execution
    and file creation**. On a Team or Enterprise account, your organisation admin controls this.
-2. Zip the `phd-industry-resume` folder (the folder itself, not the whole repo).
-3. Go to **Customize > Skills**, click **+**, then **Create skill > Upload a skill**, and upload
+3. Zip the `phd-industry-resume` folder (the folder itself, not the whole repo).
+4. Go to **Customize > Skills**, click **+**, then **Create skill > Upload a skill**, and upload
    the zip.
-4. Check the skill is switched on in your skills list.
+5. Check the skill is switched on in your skills list.
 
 Skills work on Free, Pro, Max, Team and Enterprise plans. Menu names change from time to time;
 see Anthropic's guide, [Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude),
@@ -71,7 +72,7 @@ Start a new chat, attach or paste your CV, and say what you want. For example:
 - "Quiz me on the resume myths from the workshop."
 - "Recap the workshop. I missed the part on writing bullets."
 
-Claude will ask a few questions first (what roles you're after, how much experience you have),
+Claude may ask a few questions first (what roles you're after, how much experience you have),
 then give you feedback and rewritten text to put into your own resume.
 
 ## A few things to keep in mind
@@ -82,6 +83,8 @@ then give you feedback and rewritten text to put into your own resume.
 - **Send a PDF**, named something like `Firstname_Lastname_Resume_Organisation.pdf`.
 - **Think about what you share.** Remove details you don't want to give an AI service, such as
   your home address or referees' contact details.
+- **No proven success.** This skill is only one of several tools you might want to consider when you're writing a resume. There's definitely to guarantee of success, and you shouldn't just copy-and-paste the outputs of this skill. It's just there to help you think differently about your current resume.
+
 
 ## Feedback
 
