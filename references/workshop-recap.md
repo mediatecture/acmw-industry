@@ -23,11 +23,38 @@ conversation, the way it ran in the room, not as a document dump.
    from the workshop, then answer from the rest of the skill if you can.
 7. **Stop when they want to.** After a section, offer the next one or a switch to their resume.
    Don't push through all five.
+8. **Random every time.** The myths quiz draws 5 random questions from a pool of 21, and the
+   before/after examples come in a random order, so students who repeat the recap, or compare
+   notes with each other, get a different set. See "Getting a random order" below.
+
+## Getting a random order
+
+You can't pick a random order reliably in your head; you'll tend to repeat the same sequence. So
+before you ask the first question of the myths quiz or the before/after examples, run the shuffle
+script in this skill's `scripts` folder:
+
+```
+python3 scripts/shuffle.py myths          # myths quiz: 5 random questions out of 21
+python3 scripts/shuffle.py myths --all    # only if they ask for every question
+python3 scripts/shuffle.py examples       # the before/after examples, all 4 in random order
+```
+
+(Use the path to the skill's folder, e.g. `python3 /path/to/phd-industry-resume/scripts/shuffle.py
+myths`.) It prints item numbers from the tables below, e.g. `17, 2, 9, 14, 5`. Ask exactly those
+questions, in exactly that order, and keep to it for the rest of the section. Run it again if
+they want another round; a new round gives a new set.
+
+- Don't show the list or the item numbers to the user. Number questions by position
+  ("Question 1 of 5"), not by their number in the table.
+- Run the script once per round, not once per question.
+- If you can't run code in this conversation, don't fall back to the table order or the first
+  five. Pick five from across the whole table, avoiding any run of consecutive numbers, and
+  choose a different set if they ask for another round.
 
 ## The menu
 
 1. **Why your PhD counts:** what a PhD shows an employer, and the roles you've already done
-2. **Resume myths quiz:** eleven yes/no statements about resumes
+2. **Resume myths quiz:** five yes/no statements about resumes, different each time
 3. **Writing a good industry resume:** the five rules, STAR, and before/after rewrites
 4. **What not to do:** a real example of what to avoid, and the don'ts
 5. **After graduation:** a checklist for the weeks after you finish
@@ -59,10 +86,18 @@ Those examples are material for resume bullets; offer to turn one into a bullet.
 
 ## 2. Resume myths quiz
 
-Ask one statement at a time: "Yes or no: [statement]". Wait for their answer. Then give the
-answer and the reason in two or three sentences, and move to the next. Keep a running score only
-if they seem to enjoy it. At the end, give the score in a few words and mention the one or two
-they got wrong, then offer to check their own resume for these.
+First run `shuffle.py myths` (see "Getting a random order"). It picks 5 of the 21 statements
+below. Never go through the table top to bottom.
+
+Ask one statement at a time: "Question 1 of 5. Yes or no: [statement]". Wait for their answer.
+Then give the answer and the reason in two or three sentences, and move to the next. At the end,
+give the score in a few words and mention the ones they got wrong. Then offer another round of
+five (run the script again) or a check of their own resume for these myths.
+
+Statements 1–11 come from the workshop slides. Statements 12–21 were added afterwards; they all
+follow from the most common misconception, that an industry resume works like an academic CV: a
+complete record read carefully by experts, when in fact it's the case for one job, skimmed by a
+non-specialist.
 
 | # | Statement | Answer | Reason to give |
 |---|---|---|---|
@@ -77,6 +112,16 @@ they got wrong, then offer to check their own resume for these.
 | 9 | My resume should lead with my education. | No | Lead with a short summary and your experience. "PhD" after your name already tells them. Education goes near the end. |
 | 10 | My email address can be party.pink.755@hotmail.com. | No | Use something like firstname.lastname on a provider you'll keep. Not your uni email either, since you'll lose it. |
 | 11 | My H-index will impress an industry employer. | No | Most won't know what it is, and those who do won't weigh it much. Show reach, adoption or change instead. |
+| 12 | A recruiter spends about a minute on the first look at my resume. | No | Eye-tracking studies put the first scan at under 10 seconds. Whatever is at the top of page one decides whether they read on. |
+| 13 | Listing my duties shows an employer what I can do. | No | Duties show what the job was. Results show what you can do: what changed because of you. |
+| 14 | A hiring manager will understand my field's terms. | No | Write for a smart reader from outside your field. If a bullet needs your field's vocabulary to make sense, rewrite it. |
+| 15 | A PhD makes me look overqualified, so I should play it down. | No | Hiding it leaves a gap of several years. Present it as a job with results, and it reads as experience. |
+| 16 | Tutoring counts as relevant experience for jobs that aren't teaching. | Yes | Explaining hard ideas, running a room and giving feedback are skills most jobs need. |
+| 17 | An honest estimate like "~200 participants" is fine on a resume. | Yes | An estimate you can explain beats a vague claim. A number you can't defend in an interview doesn't. |
+| 18 | Grant funding I helped win belongs on my resume. | Yes | Winning money is something employers understand. State your role honestly, such as "co-wrote" or "led". |
+| 19 | Experience only counts if someone paid me for it. | No | Volunteering, side projects, outreach and organising events all count if they show the skills the job needs. |
+| 20 | A two-column template with icons and skill bars helps me stand out. | No | It can confuse applicant tracking systems, and many applicants use the same templates. Plain and well spaced reads better. |
+| 21 | Applying online is enough; I don't need to talk to anyone. | No | Conversations with people in the field tell you which jobs to aim for and how to frame your resume. Sometimes they lead to a referral. |
 
 ## 3. Writing a good industry resume
 
@@ -97,32 +142,35 @@ you delivered.** Ask which rule they think their current resume breaks most.
 did), Result (what changed). On a resume, Situation and Task are often squeezed into a few words;
 Action and Result must be there.
 
-Then run the before/afters as a guessing game. Show the "before" and ask: "What's missing, and
-how would you improve it?" Let them try, then show the "after" and name what changed.
+Then run the before/afters as a guessing game. First run `shuffle.py examples` (see "Getting a
+random order") and use that order; the examples below are numbered 1–4. Show the "before" and
+ask: "What's missing, and how would you improve it?" Let them try, then show the "after" and name
+what changed.
 
-- **Before:** Sessional tutor for Introduction to Robotics (2024–2026).
+1. **Before:** Sessional tutor for Introduction to Robotics (2024–2026).
   **After:** Taught weekly labs of 25 first-year students across 4 semesters; redesigned C++
   exercises around hands-on challenges, lifting student satisfaction from 3.8 to 4.5.
   *Changed: a job title became an action, with scale, an initiative and a measured result.*
 
-- **Before:** Conducted interviews for PhD research.
+2. **Before:** Conducted interviews for PhD research.
   **After:** Recruited and interviewed 40 farmers across regional Victoria, building a dataset now
   used by two other research projects.
   *Changed: recruitment counted as work, a specific number, and evidence that others used it.*
 
-- **Before:** Responsible for customer interviews and research operations.
+3. **Before:** Responsible for customer interviews and research operations.
   **After:** Rebuilt research operations: 4x customer contact (~25 to ~100 interviews a quarter)
   and 20% lower operating costs, by consolidating tools and livestreaming all interviews.
   *Changed: "responsible for" became "rebuilt", with two numbers a business understands.*
 
-- **Before:** Created an AI art installation exhibited at several venues, which attracted media
+4. **Before:** Created an AI art installation exhibited at several venues, which attracted media
   attention.
   **After:** Reached an estimated 250m people through media coverage (~$250k advertising
   equivalent), secured $180k to build a touring museum exhibit, and gave talks at international
   policy forums.
   *Changed: vague attention became reach, money won, and who invited them.*
 
-Do two or three, not all four, unless they want more.
+Do two or three, not all four, unless they want more. Take them from the start of the shuffled
+order, so different students see different examples.
 
 **Part C: one bullet, three questions.** Show this bullet:
 

@@ -143,7 +143,8 @@ Read these as needed rather than all at once:
 - `references/australia.md`: Australian conventions (and differences elsewhere). Read when
   formatting, contact details, selection criteria or government roles come up.
 - `references/workshop-recap.md`: the workshop's sections and how to run each one
-  interactively. Read for recap mode.
+  interactively. Read for recap mode. It uses `scripts/shuffle.py` to put the quiz and the
+  before/after examples in a random order each time.
 
 ## Step 3: Do the work
 

@@ -36,6 +36,16 @@ Use these when critiquing. Only raise the ones the resume actually falls for.
 | My resume should lead with my education | **No** | Lead with a summary and experience. Education moves near the end. The "PhD" in your name line already signals it. |
 | My email address can be party.pink.755@hotmail.com | **No** | Use firstname.lastname or similar, on a provider you'll keep. Not your uni email either: you'll lose it. |
 | My h-index will impress an industry employer | **No** | Most won't know what it is, and those who do won't weigh it. Translate impact into reach, adoption or change. |
+| A recruiter spends about a minute on the first look | **No** | Eye-tracking studies put the first scan at under 10 seconds. The top of page one decides whether they read on. |
+| Listing my duties shows what I can do | **No** | Duties describe the job. Results show what changed because of you. |
+| A hiring manager will understand my field's terms | **No** | Write for a smart reader from outside the field. Flag any bullet that needs specialist vocabulary to make sense. |
+| A PhD makes me look overqualified, so I should play it down | **No** | Hiding it leaves an unexplained gap. Present it as a job with results. |
+| Tutoring only counts for teaching jobs | **No** | Explaining hard ideas, running a room and giving feedback are skills most jobs need. |
+| An honest estimate ("~200 participants") is fine | **Yes** | Better than a vague claim, as long as they can explain it in an interview. |
+| Grant funding I helped win belongs on my resume | **Yes** | Employers understand money won. State the role honestly ("co-wrote", "led"). |
+| Experience only counts if I was paid for it | **No** | Volunteering, side projects, outreach and events count if they show the skills the job needs. |
+| A two-column template with icons and skill bars stands out | **No** | It can confuse applicant tracking systems and looks like many others. Plain, one column. |
+| Applying online is enough | **No** | Talking to people in the field helps with targeting and framing, and sometimes leads to a referral. |
 
 ## The publications rule
 
