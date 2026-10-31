@@ -38,6 +38,8 @@ phd-industry-resume/
     ├── australia.md          Australian conventions and government roles, plus other countries
     ├── model-resume.md       An anonymised, annotated example resume
     └── workshop-recap.md     The workshop sections, run as an interactive recap
+└── scripts/
+    └── shuffle.py            Puts the quiz and recap questions in a random order
 ```
 
 ## Install it
