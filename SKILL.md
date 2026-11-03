@@ -1,6 +1,6 @@
 ---
 name: phd-industry-resume
-description: Helps PhD graduates, postdocs and early-career academics turn an academic CV into an industry resume, critique an existing resume, or tailor it to a specific job ad. Use this whenever someone with a research or academic background shares a CV or resume, mentions leaving academia, applying for industry, government, consulting, UX, data or policy jobs, asks "is my resume any good?", wants to rewrite bullet points, or pastes a job ad alongside their CV, even if they never say "industry" or "PhD". Also use it when someone wants to recap, replay or be quizzed on the From Research to Industry workshop. Custom-made by Niels Wouters (nielswouters.au) for attendees of the ACM-W workshop "From Research to Industry" (ACM-W Student Chapter Monash University with the Monash FIT EDI Portfolio).
+description: Helps PhD graduates, postdocs and early-career academics turn an academic CV into an industry resume, critique an existing resume, tailor it to a specific job ad, or write and critique cover letters. Use this whenever someone with a research or academic background shares a CV or resume, mentions leaving academia, applying for industry, government, consulting, UX, data or policy jobs, asks "is my resume any good?", wants to rewrite bullet points, asks for help with a cover letter, or pastes a job ad alongside their CV, even if they never say "industry" or "PhD". Also use it when someone wants to recap, replay or be quizzed on the From Research to Industry workshop. Custom-made by Niels Wouters (nielswouters.au) for attendees of the ACM-W workshop "From Research to Industry" (ACM-W Student Chapter Monash University with the Monash FIT EDI Portfolio).
 ---
 
 # PhD to industry resume coach
@@ -97,15 +97,20 @@ in feedback on someone else's resume.
 
 ## Step 1: Work out what they need
 
-Four modes. For resume work, users often need more than one, in this order: convert, then
-critique, then tailor.
+Five modes. For resume work, users often need more than one, in this order: convert, then
+critique, then tailor, then cover letter.
 
 | Mode | When | What you produce |
 |---|---|---|
 | **Convert** | They have an academic CV (long, publications-heavy, education first) and want an industry resume | A new structure plus rewritten sections, with gaps for missing numbers |
 | **Critique** | They have a resume already and want to know if it's good | An assessment, the top fixes, then bullet-by-bullet rewrites |
 | **Tailor** | They paste or describe a specific job ad | A version reframed for that role, plus what to cut, move up or add |
+| **Cover letter** | They want to write a cover letter, a "pitch" or a letter for an application, or want feedback on one | A one-page draft from their facts with gaps to fill, or an assessment and rewrite of their letter |
 | **Recap** | They want to go back over the workshop: "recap", "replay the talk", "quiz me on the myths", "what were the slides about", "what should I do after graduating", or they open with no resume and aren't sure where to start | An interactive walk-through of a section of the workshop, run as a conversation |
+
+For **cover letter**, read `references/cover-letter.md` and follow its coaching flow. It needs
+the job ad and their resume or its facts; the questions below about target roles and stage don't
+apply.
 
 For **recap**, read `references/workshop-recap.md` and follow it. It doesn't need a resume, so
 skip the questions below. If they share a resume during or after the recap, switch to convert or
@@ -142,6 +147,8 @@ Read these as needed rather than all at once:
   someone who made the move. Use it to show structure and level of specificity, not as text to copy.
 - `references/australia.md`: Australian conventions (and differences elsewhere). Read when
   formatting, contact details, selection criteria or government roles come up.
+- `references/cover-letter.md`: rules, structure, a worked before/after and the coaching flow
+  for cover letters. Read for cover letter mode.
 - `references/workshop-recap.md`: the workshop's sections and how to run each one
   interactively. Read for recap mode. It uses `scripts/shuffle.py` to put the quiz and the
   before/after examples in a random order each time.

@@ -4,6 +4,7 @@
 Usage:
     python3 shuffle.py myths          # 5 random myths from the pool of 21
     python3 shuffle.py myths --all    # all 21 myths, in random order
+    python3 shuffle.py letters        # 5 random cover letter questions from 12
     python3 shuffle.py examples       # the 4 before/after examples, in random order
 
 Prints the chosen item numbers on one line, comma-separated.
@@ -15,6 +16,7 @@ import sys
 # name: (pool size, how many to draw by default)
 SETS = {
     "myths": (21, 5),
+    "letters": (12, 5),
     "examples": (4, 4),
 }
 

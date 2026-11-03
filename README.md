@@ -9,7 +9,7 @@ University together with the Monash FIT EDI Portfolio.
 
 ## What it does
 
-Give Claude your CV or resume and it will help you in one of three ways:
+Give Claude your CV or resume and it will help you in one of five ways:
 
 - **Convert** a long academic CV into a 1–3 page industry resume, with your PhD listed as work
   experience.
@@ -17,8 +17,10 @@ Give Claude your CV or resume and it will help you in one of three ways:
   bullet-by-bullet rewrites.
 - **Tailor** your resume to a specific job ad: what to move up, what to cut, and how to reframe
   your experience for that role.
-- **Recap** the workshop: go back over a section, take the resume myths quiz, try the
-  before/after exercises, or work through the after-graduation checklist. No resume needed.
+- **Write or check a cover letter**: a one-page draft built from your own experience and the job
+  ad, or feedback on a letter you've written.
+- **Recap** the workshop: go back over a section, take the resume myths or cover letter quiz, try
+  the before/after exercises, or work through the after-graduation checklist. No resume needed.
 
 It works as a coach, not a ghostwriter. It only uses facts you give it, and when a bullet needs a
 number it doesn't have, it leaves a gap like `[how many?]` and asks you. It won't make up
@@ -31,13 +33,14 @@ The advice is written for the Australian job market, with notes for other countr
 ```
 phd-industry-resume/
 ├── SKILL.md                  How Claude runs the coaching
-└── references/
-    ├── rules.md              Core rules, common resume myths, and things to avoid
-    ├── bullets.md            How to rewrite a bullet, with before/after examples
-    ├── tailoring.md          Reading a job ad and adjusting for different role types
-    ├── australia.md          Australian conventions and government roles, plus other countries
-    ├── model-resume.md       An anonymised, annotated example resume
-    └── workshop-recap.md     The workshop sections, run as an interactive recap
+├── references/
+│   ├── rules.md              Core rules, common resume myths, and things to avoid
+│   ├── bullets.md            How to rewrite a bullet, with before/after examples
+│   ├── tailoring.md          Reading a job ad and adjusting for different role types
+│   ├── australia.md          Australian conventions and government roles, plus other countries
+│   ├── model-resume.md       An anonymised, annotated example resume
+│   ├── cover-letter.md       Cover letter rules, structure and a before/after example
+│   └── workshop-recap.md     The workshop sections, run as an interactive recap
 └── scripts/
     └── shuffle.py            Puts the quiz and recap questions in a random order
 ```
@@ -71,10 +74,12 @@ Start a new chat, attach or paste your CV, and say what you want. For example:
 - "Is my resume any good for data science jobs?"
 - "Here's my resume and a job ad for a policy officer at the Department of Health. Help me tailor
   it."
+- "Here's the job ad and my resume. Help me write a cover letter."
 - "Quiz me on the resume myths from the workshop."
+- "Give me the cover letter quiz."
 - "Recap the workshop. I missed the part on writing bullets."
 
-Claude may ask a few questions first (what roles you're after, how much experience you have),
+Claude will ask a few questions first (what roles you're after, how much experience you have),
 then give you feedback and rewritten text to put into your own resume.
 
 ## A few things to keep in mind

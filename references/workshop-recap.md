@@ -6,7 +6,7 @@ conversation, the way it ran in the room, not as a document dump.
 
 ## How to run it
 
-1. **Offer the menu.** Unless they've already named a section, list the five sections below with
+1. **Offer the menu.** Unless they've already named a section, list the six sections below with
    one plain line each, and ask which one they want. Keep it short.
 2. **One step at a time.** Give a small piece, then stop and let them respond. For the quiz, that
    means one myth per message. Don't print a whole section in one go; that turns it into notes,
@@ -22,9 +22,9 @@ conversation, the way it ran in the room, not as a document dump.
    that isn't here (for example, something the speaker said out loud), say it isn't in your notes
    from the workshop, then answer from the rest of the skill if you can.
 7. **Stop when they want to.** After a section, offer the next one or a switch to their resume.
-   Don't push through all five.
-8. **Random every time.** The myths quiz draws 5 random questions from a pool of 21, and the
-   before/after examples come in a random order, so students who repeat the recap, or compare
+   Don't push through all six.
+8. **Random every time.** The myths quiz draws 5 random questions from a pool of 21, the cover
+   letter quiz draws 5 from 12, and the before/after examples come in a random order, so students who repeat the recap, or compare
    notes with each other, get a different set. See "Getting a random order" below.
 
 ## Getting a random order
@@ -36,6 +36,8 @@ script in this skill's `scripts` folder:
 ```
 python3 scripts/shuffle.py myths          # myths quiz: 5 random questions out of 21
 python3 scripts/shuffle.py myths --all    # only if they ask for every question
+python3 scripts/shuffle.py letters        # cover letter quiz: 5 random questions out of 12
+python3 scripts/shuffle.py letters --all  # only if they ask for every question
 python3 scripts/shuffle.py examples       # the before/after examples, all 4 in random order
 ```
 
@@ -58,6 +60,7 @@ they want another round; a new round gives a new set.
 3. **Writing a good industry resume:** the five rules, STAR, and before/after rewrites
 4. **What not to do:** a real example of what to avoid, and the don'ts
 5. **After graduation:** a checklist for the weeks after you finish
+6. **Cover letter quiz:** five yes/no statements about cover letters, different each time
 
 ---
 
@@ -254,3 +257,32 @@ before jumping into the next thing isn't wasted time, and you'll interview bette
 
 Offer help with whichever item they pick next: collecting metrics (use "Digging for numbers" in
 SKILL.md), rewriting a LinkedIn summary from their resume, or building the base resume.
+
+## 6. Cover letter quiz
+
+This wasn't a section of the workshop slides; it was added afterwards and builds on the
+"don't send generic letters" and AI cover letter points in section 4. Run it the same way as the
+myths quiz: first run `shuffle.py letters` (see "Getting a random order"), which picks 5 of the 12
+statements below, then ask one at a time: "Question 1 of 5. Yes or no: [statement]". Wait for
+their answer, then give the answer and the reason.
+
+The statements are meant to be a bit funny; let the statement carry the joke. The reasons can be
+light where written that way, but keep them plain and short.
+
+At the end, give the score in a few words, then offer another round or help with their own cover
+letter (switch to cover letter mode, `cover-letter.md`).
+
+| # | Statement | Answer | Reason to give |
+|---|---|---|---|
+| 1 | If I use find-and-replace on the company name, my letter is tailored. | No | It's the same letter with a different name in it, and one day you'll miss one and tell Deloitte how much you admire KPMG. |
+| 2 | Saying it's my dream job will set me apart. | No | Nearly everyone says it. Show you understand the role by naming what you'd work on and why you're suited to it. |
+| 3 | "I am thrilled to leverage my passion for driving meaningful impact" is a strong opening line. | No | Every word could be about anyone. Recruiters now see this phrasing daily and recognise AI-written text. |
+| 4 | When the ad says a cover letter is optional, it's optional. | Technically yes | But a short, tailored letter gives you a chance most applicants skip. Send one if you can say something specific. |
+| 5 | "To Whom It May Concern" is a fine way to start. | No | It works, but it reads like a complaint to the council. Find the hiring manager's name, or use "Dear [team] hiring team". |
+| 6 | "I am writing to apply for the position of…" is a good first sentence. | No | They already know; it's in the subject line. Open with why you and this role fit. |
+| 7 | My cover letter can be two pages, like the one for my postdoc. | No | One page, three or four short paragraphs. Academic letters are a different genre. |
+| 8 | The cover letter should repeat my resume in full sentences. | No | Pick two or three examples and add what the resume can't: why they matter for this job. |
+| 9 | The cover letter is where I explain what I want: flexibility, a good salary, a supportive team. | No | It's about what they get. Your needs come up later, in interviews and negotiation. |
+| 10 | Apologising for having no industry experience shows humility. | No | It points the reader at a gap. Say what you've done that fits the job instead. |
+| 11 | Nobody reads cover letters anyway. | No | In one survey (by a resume company, so not neutral), most hiring managers said they do, and tailored letters got noticeably more interview callbacks. |
+| 12 | I can answer the selection criteria in my cover letter instead of separately. | No | In government and university jobs, criteria are scored where the ad asks for them. Answer them there. |
